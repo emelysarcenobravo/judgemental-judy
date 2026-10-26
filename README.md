@@ -1,4 +1,4 @@
-# Judgmental Judy
+# Judegmental Judy
 
 **Your judgmental AI budget advisor.**
 
