@@ -1,30 +1,42 @@
-# Judegmental Judy
+# Judgmental Judy
 
 **Your judgmental AI budget advisor.**
 
-Judgmental Judy is a generative AI-powered budgeting application that helps users track expenses, understand their spending habits, and identify opportunities to cut back. Powered by Claude, Judy delivers personalized financial insights with a witty, sarcastic, and judgmental personality.
+Judgmental Judy is a generative AI-powered budgeting application that helps users track expenses, manage discretionary spending, and identify opportunities to cut back on excessive spending habits. Powered by Anthropic's Claude, Judy analyzes users' financial information and delivers personalized insights with a witty, sarcastic, and increasingly judgmental personality as their discretionary budget decreases.
 
 ## Features
 
-- **Financial Dashboard:** View income, expenses, and remaining available cash.
-- **Expense Tracking:** Organize spending into categories such as food, shopping, and subscriptions.
-- **Spending Analysis:** Identify potentially excessive spending and bad financial habits.
-- **AI Budget Advisor:** Receive personalized observations and recommendations from Judy.
-- **Interactive Chat:** Talk to Judy and get judgmental feedback about your spending.
-- **Sample Financial Profiles:** Explore the application using predefined financial scenarios.
+- **Financial Dashboard:** View monthly income, necessary expenses, discretionary spending, and remaining available cash.
+- **Expense Tracking:** Manually enter transactions and organize spending into categories such as food, shopping, entertainment, and subscriptions.
+- **Discretionary Budgeting:** Calculate available discretionary income after accounting for monthly necessities and track how much remains.
+- **Spending Analysis:** Identify potentially excessive spending, recurring purchases, and questionable financial habits.
+- **AI Budget Advisor:** Receive personalized financial observations and recommendations from Judy, with increasingly judgmental commentary as discretionary funds decrease.
+- **Interactive Chat:** Ask Judy questions about your finances, spending habits, and purchasing decisions through a conversational chatbot.
+- **Sample Financial Profiles:** Explore the application using predefined financial scenarios without entering personal financial information.
+
+## How Judy Works
+
+The application uses traditional programming logic to process financial information, calculate budgets, and track spending. This structured financial data is then passed to Claude, which interprets spending patterns and generates personalized feedback.
+
+Judy interacts with users in two ways:
+
+- **Dashboard Commentary:** Judy automatically provides sarcastic observations about spending habits and reacts to changes in discretionary spending.
+- **Conversational Chatbot:** Users can interact directly with Judy to ask questions, discuss financial decisions, and receive personalized advice.
+
+Judy's judgmental personality escalates as users approach their discretionary spending limits, while maintaining a humorous and helpful approach to financial awareness.
 
 ## Tech Stack
 
-- **Frontend:** React, Tailwind CSS
+- **Frontend:** React, Tailwind CSS, Recharts
 - **Backend:** Python, Flask
 - **Database:** SQLite
 - **Generative AI:** Anthropic Claude API
 - **Development:** VS Code, Git, GitHub
-- **Deployment:** Vercel 
+- **Deployment:** Vercel (frontend), backend hosting TBD
 
 ## Project Status
 
-Currently in development as part of CSC 603/803 — Generative AI.
+Currently in development as part of CSC 603/803 — Generative AI at San Francisco State University.
 
 ## Goal
 
