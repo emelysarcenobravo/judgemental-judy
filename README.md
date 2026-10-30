@@ -27,12 +27,97 @@ Judy's judgmental personality escalates as users approach their discretionary sp
 
 ## Tech Stack
 
-- **Frontend:** React, Tailwind CSS, Recharts
+- **Frontend:** React, Vite, Tailwind CSS, Recharts
 - **Backend:** Python, Flask
 - **Database:** SQLite
 - **Generative AI:** Anthropic Claude API
-- **Development:** VS Code, Git, GitHub
+- **Development:** VS Code, Git, GitHub, ESLint
 - **Deployment:** Vercel (frontend), backend hosting TBD
+
+## Getting Started
+
+### Prerequisites
+
+Install these before setting up the project:
+
+- [Python 3.12+](https://www.python.org/downloads/) (on macOS: `brew install python@3.12`)
+- [Node.js 20+](https://nodejs.org/) (includes npm)
+- [Git](https://git-scm.com/)
+- [VS Code](https://code.visualstudio.com/) (recommended)
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/emelysarcenobravo/judgmental-judy.git
+cd judgmental-judy
+```
+
+### 2. Set up the backend (Flask)
+
+```bash
+cd backend
+python3.12 -m venv venv
+source venv/bin/activate        # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+Create a `backend/.env` file for your Claude API key (never commit this file):
+
+```
+ANTHROPIC_API_KEY=your-key-here
+```
+
+Start the server:
+
+```bash
+python app.py
+```
+
+Visit http://localhost:5001/api/health to confirm it's running.
+
+Test Judy's chat endpoint (requires your API key in `backend/.env`):
+
+```bash
+curl -X POST http://localhost:5001/api/chat \
+  -H "Content-Type: application/json" \
+  -d '{"messages": [{"role": "user", "content": "I spent $80 on boba this week"}]}'
+```
+
+> Activate the virtual environment (`source venv/bin/activate`) every time you open a new terminal to work on the backend.
+
+### 3. Set up the frontend (React + Vite + Tailwind)
+
+In a new terminal:
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Visit http://localhost:5173 to view the app.
+
+### Useful commands
+
+| Command | Where | What it does |
+|---|---|---|
+| `python app.py` | `backend/` | Start the Flask API |
+| `npm run dev` | `frontend/` | Start the frontend dev server |
+| `npm run lint` | `frontend/` | Check code for errors with ESLint |
+| `npm run build` | `frontend/` | Create a production build (Vercel runs this on deploy) |
+
+### Project structure
+
+```
+judgmental-judy/
+├── backend/          # Flask API
+│   ├── app.py
+│   └── requirements.txt
+├── frontend/         # React + Vite + Tailwind app
+│   ├── src/
+│   └── package.json
+└── README.md
+```
 
 ## Project Status
 
